@@ -6,7 +6,9 @@ export default function Avatar() {
       <Image
         src={`/images/profile.png`}
         fill
+        sizes="100vw"
         style={{ objectFit: 'contain' }}
+        alt="user avatar"
       />
     </div>
   );

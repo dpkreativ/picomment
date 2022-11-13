@@ -8,6 +8,7 @@ export default function ImageContent({ alt, src }) {
         src={src}
         alt={alt}
         fill
+        sizes="100vw"
         priority
         style={{ objectFit: 'contain' }}
       />
