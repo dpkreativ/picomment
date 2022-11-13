@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .avatar {
+    @apply p-5 h-full rounded-full relative;
+  }
+
+  .btn {
+    @apply px-5 py-2 bg-slate-800 rounded-2xl text-white;
+  }
+
+  .caption {
+    @apply py-5 border-b border-[#eaeaea] flex justify-between items-center;
+  }
+
+  .comment {
+    @apply p-3 rounded-2xl bg-slate-100 w-full;
+  }
+
+  .footer {
+    @apply flex py-8 border-t border-[#eaeaea] justify-center items-center;
+  }
+
+  .header {
+    @apply py-5 bg-slate-200 text-center;
+  }
+
+  .image-box {
+    @apply h-96 rounded-2xl relative border border-[#eaeaea] overflow-hidden;
+  }
+
+  .input {
+    @apply w-full outline-none;
+  }
+
+  .input-box {
+    @apply w-full flex border border-[#eaeaea] rounded-2xl items-center px-3 py-2;
+  }
+}
