@@ -7,10 +7,11 @@ import Login from '../components/ui/organisms/Login';
 import { Comments } from '../components/assets/Comments';
 import { useSelector } from 'react-redux';
 import { selectAuthState } from '../store/slices/authSlice';
+import { selectComments } from '../store/slices/commentSlice';
 
 export default function Home() {
   const authState = useSelector(selectAuthState);
-  const comments = Comments.value;
+  const comments = useSelector(selectComments);
 
   return (
     <div>
