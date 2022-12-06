@@ -5,8 +5,11 @@ import Hero from '../components/ui/organisms/Hero';
 import NewComment from '../components/ui/organisms/NewComment';
 import Login from '../components/ui/organisms/Login';
 import { Comments } from '../components/assets/Comments';
+import { useSelector } from 'react-redux';
+import { selectAuthState } from '../store/slices/authSlice';
 
 export default function Home() {
+  const authState = useSelector(selectAuthState);
   const comments = Comments.value;
 
   return (
@@ -33,8 +36,7 @@ export default function Home() {
         </section>
 
         {/* Input Section */}
-        <NewComment />
-        <Login />
+        {authState ? <NewComment /> : <Login />}
       </HomeLayout>
     </div>
   );

@@ -1,9 +1,15 @@
+import { useDispatch } from 'react-redux';
+import { setAuthState, setAuthUser } from '../../../store/slices/authSlice';
 import Button from '../atoms/Button';
 import Input from '../atoms/Input';
 
 export default function Login() {
+  const dispatch = useDispatch();
+
   function handleLogin(e) {
     e.preventDefault();
+    dispatch(setAuthState(true));
+    dispatch(setAuthUser(e.target.user.value));
   }
 
   return (
